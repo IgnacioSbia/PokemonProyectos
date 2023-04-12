@@ -1,0 +1,203 @@
+{
+  "pokemons": [
+    {
+      "id": "001",
+      "name": "Bulbassaur",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+      "color": "#74CB48",
+      "secondaryColor": "#A43E9E",
+      "mainType": "Grass",
+      "SecondaryType": "Poison",
+      "MainAbility": "Chlorophyll",
+      "SecondaryAbility": "Overgrow",
+      "height": "0,7m",
+      "weight": "6,9kg",
+      "description": "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
+      "stats": {
+        "HP": "045",
+        "ATK": "049",
+        "DEF": "049",
+        "SATK": "065",
+        "SDEF": "065",
+        "SPD": "045"
+      }
+    },
+    {
+      "id": "004",
+      "name": "Charmander",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+      "color": "#F57D31",
+      "secondaryColor": "",
+      "mainType": "Fire",
+      "SecondaryType": "",
+      "MainAbility": "Mega-Punch",
+      "SecondaryAbility": "Fire-Punch",
+      "height": "0,6m",
+      "weight": "8,5kg",
+      "description": "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+      "stats": {
+        "HP": "039",
+        "ATK": "052",
+        "DEF": "043",
+        "SATK": "060",
+        "SDEF": "050",
+        "SPD": "065"
+      }
+    },
+    {
+      "id": "007",
+      "name": "Squirtle",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+      "color": "#6493EB",
+      "secondaryColor": "",
+      "mainType": "Water",
+      "SecondaryType": "",
+      "MainAbility": "Torrent",
+      "SecondaryAbility": "Rain-Dish",
+      "height": "0,5m",
+      "weight": "9,0kg",
+      "description": "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
+      "stats": {
+        "HP": "044",
+        "ATK": "048",
+        "DEF": "065",
+        "SATK": "050",
+        "SDEF": "064",
+        "SPD": "043"
+      }
+    },
+    {
+      "id": "012",
+      "name": "Butterfree",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
+      "color": "#A7B723",
+      "secondaryColor": "#A891EC",
+      "mainType": "Bug",
+      "SecondaryType": "Flying",
+      "MainAbility": "Compound-Eyes",
+      "SecondaryAbility": "Tinted-Lens",
+      "height": "1,1m",
+      "weight": "32,0kg",
+      "description": "In battle, it flaps its wings at great speed to release highly toxic dust into the air.",
+      "stats": {
+        "HP": "060",
+        "ATK": "045",
+        "DEF": "050",
+        "SATK": "090",
+        "SDEF": "080",
+        "SPD": "070"
+      }
+    },
+    {
+      "id": "025",
+      "name": "Pikachu",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+      "color": "#F9CF30",
+      "secondaryColor": "",
+      "mainType": "Electric",
+      "SecondaryType": "",
+      "MainAbility": "Mega-Punch",
+      "SecondaryAbility": "Pay-Day",
+      "height": "0,4m",
+      "weight": "6,0kg",
+      "description": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+      "stats": {
+        "HP": "035",
+        "ATK": "055",
+        "DEF": "040",
+        "SATK": "050",
+        "SDEF": "050",
+        "SPD": "090"
+      }
+    },
+    {
+      "id": "092",
+      "name": "Gastly",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png",
+      "color": "#70559B ",
+      "secondaryColor": "#A43E9E",
+      "mainType": "Ghost",
+      "SecondaryType": "Poison",
+      "MainAbility": "Levitate",
+      "SecondaryAbility": "",
+      "height": "1,3m",
+      "weight": "0,1kg",
+      "description": "Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison.",
+      "stats": {
+        "HP": "030",
+        "ATK": "035",
+        "DEF": "030",
+        "SATK": "100",
+        "SDEF": "035",
+        "SPD": "080"
+      }
+    },
+
+    {
+      "id": "132",
+      "name": "Ditto",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png",
+      "color": "#AAA67F ",
+      "secondaryColor": "",
+      "mainType": "Normal",
+      "SecondaryType": "",
+      "MainAbility": "Limber",
+      "SecondaryAbility": "Imposter",
+      "height": "0,3m",
+      "weight": "4,0kg",
+      "description": "It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes.",
+      "stats": {
+        "HP": "048",
+        "ATK": "048",
+        "DEF": "048",
+        "SATK": "048",
+        "SDEF": "048",
+        "SPD": "048"
+      }
+    },
+    {
+      "id": "152",
+      "name": "Mew",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png",
+      "color": "#FB5584 ",
+      "secondaryColor": "",
+      "mainType": "Psychic",
+      "SecondaryType": "",
+      "MainAbility": "Synchronize",
+      "SecondaryAbility": "",
+      "height": "0,4m",
+      "weight": "4,0kg",
+      "description": "When viewed through a microscope, this Pokémon’s short, fine, delicate hair can be seen.",
+      "stats": {
+        "HP": "100",
+        "ATK": "100",
+        "DEF": "100",
+        "SATK": "100",
+        "SDEF": "100",
+        "SPD": "100"
+      }
+    },
+    {
+      "id": "304",
+      "name": "Aron",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/304.png",
+      "color": "#B7B9D0 ",
+      "secondaryColor": "#B69E31",
+      "mainType": "Steel",
+      "SecondaryType": "Rock",
+      "MainAbility": "Sturdy",
+      "SecondaryAbility": "Roch-Head",
+      "height": "0,4m",
+      "weight": "60,0kg",
+      "description": "It eats iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body.",
+      "stats": {
+        "HP": "050",
+        "ATK": "070",
+        "DEF": "100",
+        "SATK": "040",
+        "SDEF": "040",
+        "SPD": "030"
+      }
+    }
+  ]
+}
