@@ -145,8 +145,8 @@ a{
   
   .pokemonDetailName{
     position: absolute;
-    left: 40px;
-    top: 170px;
+    left: 45px;
+    top: 150px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -156,17 +156,20 @@ a{
   }
   .pokemonDetailsArrowBack{
     position: absolute;
-    top: 172px;
-    left: 7px;
+    top: 152px;
+    left: 8px;
   }
-  .searchSortById{
-    border-radius: 15px;
+  .searchSortBy{
+    left: 340px;
+    position: absolute;
+    border-radius: 20px;
+    border: none;
   }
 
   .pokemonDetailId{
     position: absolute;
-    left: 330px;
-    top: 170px;
+    left: 335px;
+    top: 150px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -175,10 +178,10 @@ a{
     color: white;
   }
   .pokemonDetail{
-    height: 101vh;
+    height: 85vh;
     background-image: url('./imagenes/pokeball.svg');
     background-repeat: no-repeat;
-    background-position-x: 215px;
+    background-position-x: 200px;
     background-color: gray;
     
   }
@@ -186,7 +189,7 @@ a{
     position: absolute;
     width: 220px;
     height: 220px;
-    bottom: 420px;
+    bottom: 430px;
     left:70px;
 
   }
@@ -205,7 +208,7 @@ a{
   .pokemonDetailsAbout{
     position: absolute;
     left: 150px;
-    top: 170px;
+    top: 165px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -238,7 +241,7 @@ a{
     justify-content: space-evenly;
     position: relative;
     left: 10px;
-    top: 190px;
+    top: 180px;
     width: 350.33px;
     height: 48px;
     
@@ -266,13 +269,13 @@ a{
   /*Description*/
   .pokemonDetailsDescription{
     position: relative;
-    top:210px;
+    top:205px;
     margin-left: 20px;
     margin-right: 20px;
   }
   .pokemonDetailsBaseStats{
     position: absolute;
-    top: 340px;
+    top: 335px;
     left: 135px;
     font-family: 'Poppins';
     font-style: normal;
@@ -313,8 +316,8 @@ a{
 
   .pokemonDetailsStatsBar{
     position: relative;
-    top: 250px;
-    left: 20px;
+    top: 245px;
+    left: 6px;
    
   }
 
@@ -417,11 +420,412 @@ a{
   }
   .pokemonDetailsStatBarContent{
     position: absolute;
+    background-color: #000000 !important;
+    opacity: 1 !important;
+    height: 5px;
+    border-radius: 4px;
+  }
+
+
+}
+
+@media(min-width:391px){
+  html{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 250px;
+  }
+  /*Estilos de Lista Pokemon*/
+  
+  div.pokemonCard{
+    width: 104px;
+    height: 108px;
+    
+    background: #FFFFFF; 
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    
+  }
+  div.pokemonCardContent{
+    border-radius: 20px 20px 0 0 ;
+    width: 104px;
+    
+    height: 108px;;
+    position: relative;
+    left: 5px;
+    
+    bottom: 10px;
+    margin-bottom: 30px;
+  }
+  img.pokemonImage{
+    position: relative;
+    width: 70px;
+    height: 72px;
+    left: 12px;
+    top: -2px;
+  }
+  .idPokemon{
+    color: #666666;
+    font-size: 8px;
+    position: relative;
+    top:10px;
+    text-align: end;
+    margin-right: 10px;
+  }
+  .pokemonName{
+    text-align: center;
+    position: relative;
+    bottom: 15px;
+  }
+  .pokemonName{
+    color: white;
+    font-size: 10px;
+    position: relative;
+    bottom: 65px;
+    color: #1D1D1D;
+  }
+  .contenedorListaPokemon{
+    background-color: white;
+    width: 372px;
+    height: 655px;
+    left: 8px;
+    border-radius: 8px;
+    position: relative;
+  }
+  div.contentMainPage{
+    background-color: #DC0A2D;
+    height: 100vh;
+  }
+  .listaPokemon{
+    margin: 0;
+    padding: 0;
+    width:100%;
+  }
+  
+  a{
+    display: inline-flex;
+    text-decoration: none !important;
+  }
+  .searchBarPokemon{
+    height: 32px;
+    width: 280px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    margin-left: 12px;
+    padding-left: 40px;
+    background-image: url('./imagenes/searchIMG.svg');
+    background-repeat: no-repeat;
+    background-size: 30px;
+  
+  }
+  .pokemonDetailsTitle{
+    display: flex;
+    position: relative;
+    right: 3px;
+    bottom: 130px;
+  }
+  
+  .pokemonDetailName{
+    position: absolute;
+    left: 45px;
+    top: 150px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 32px;
+    color: white;
+  }
+  .pokemonDetailsArrowBack{
+    position: absolute;
+    top: 152px;
+    left: 8px;
+  }
+  .searchSortBy{
+    top: 5px;
+    left: 5px;
+    position: relative;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  .pokemonDetailId{
+    position: absolute;
+    left: 290px;
+    top: 150px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: white;
+  }
+  .pokemonDetail{
+    height: 80vh;
+    background-image: url('./imagenes/pokeball.svg');
+    background-repeat: no-repeat;
+    background-position-x: 200px;
+    background-color: gray;
+    border-radius: 10px;
+    position: relative;
+    
+  }
+  .pokemonDetailImg{
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    bottom: 430px;
+    left:70px;
+  
+  }
+  .pokemonDetailContent{
+    background-color: white;
+    height: 542px;
+    width: 319px;
+    top: 155px;
+    position: relative;
+    left: 25px;
+    background: #FFFFFF;
+    /* Inner Shadow/2 dp */
+    box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    
+    
+  }
+  .pokemonDetailsAbout{
+    position: absolute;
+    left: 150px;
+    top: 165px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 16px;
+  }
+  .pokemonDetailsTypes{
+    display: flex;
+    position: relative;
+    top: 115px;
+    right: 10px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: white;
+  }
+  .pokemonDetailType{
+    width: 54px;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+    left: 130px;
+    
+  }
+  .pokemonDetailsInfo{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    left: 10px;
+    top: 180px;
+    width: 350.33px;
+    height: 48px;
+    
+  }
+  .pokemonDetailsWeight{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid #6666666e;
+    padding-right: 15px;
+    
+  }
+  .pokemonDetailsWeightImg{
+    position: absolute;
+    left: 2px;
+    width: 25px;
+    height: 25px;
+  }
+  .pokemonDetailsWeightInfo{
+    margin-bottom: 20px;
+  }
+  .pokemonDetailsStatsAbout{ 
+    color:#666666;
+  }
+  /*Description*/
+  .pokemonDetailsDescription{
+    position: relative;
+    top:205px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .pokemonDetailsBaseStats{
+    position: absolute;
+    top: 335px;
+    left: 135px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    
+  
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  /*Height*/
+  .pokemonDetailsHeight{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    
+    
+  }
+  .pokemonDetailsHeightImg{
+    position: absolute;
+    left: 105px;
+    width: 25px;
+    height: 25px;
+  }
+  .pokemonDetailsHeightInfo{
+    margin-bottom: 20px;
+  }
+  
+  .pokemonDetailsMoves{
+    position: relative;
+    border-left: 1px solid #6666666e;
+    padding-left: 15px;
+    right:15px;
+  }
+  /*Stats*/
+  
+  .pokemonDetailsStatsBar{
+    position: relative;
+    top: 245px;
+    left: 6px;
+   
+  }
+  
+  
+  .pokemonDetailsHp{
+    display: flex;
+  
+  }
+  .pokemonDetailsAtk{
+    display: flex;
+  
+  }
+  .pokemonDetailsDef{
+    display: flex;
+  
+  }
+  .pokemonDetailsSatk{
+    display: flex;
+  
+  }
+  .pokemonDetailsSdef{
+    display: flex;
+  
+  }
+  .pokemonDetailsSpd{
+    display: flex;
+  
+  }
+  .pokemonDetailBarSpd{
+    position: absolute;
+    top: 113px;
+    left: 120px;
+    height: 5px;
+    width: 190px;
+    opacity: 0.4;
+    border-radius: 4px;
+  }
+  .pokemonDetailBarSatk{
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    height: 5px;
+    width: 190px;
+    opacity: 0.4;
+    border-radius: 4px;
+  }
+  .pokemonDetailBarSdef{
+    position: absolute;
+    top: 90px;
+    left: 120px;
+    height: 5px;
+    width: 190px;
+    opacity: 0.4;
+    border-radius: 4px;
+  }
+  .pokemonDetailBarDef{
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    height: 5px;
+    width: 190px;
+    opacity: 0.4;
+    border-radius: 4px;
+  }
+  .pokemonDetailBarAtk{
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    height: 5px;
+    width: 190px;
+    opacity: 0.4;
+    border-radius: 4px;
+  }
+  .pokemonDetailBarHp{
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    height: 5px;
+    width: 190px;
+    opacity: 0.4;
+    border-radius: 4px;
+  }
+  
+  
+  
+  .pokemonDetailsStatPokemon{
+    padding-right: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  
+  .pokemonDetailsStatPokemonContent{
+    position: absolute;
+    left: 60px;
+    border-left: 1px solid #6666666e;
+    padding-left: 15px
+  }
+  .pokemonDetailsStatBarContent{
+    position: absolute;
     background-color: #000000a6 !important;
     opacity: 1 !important;
     height: 5px;
     border-radius: 4px;
   }
+  
+  
+
 
 
 }

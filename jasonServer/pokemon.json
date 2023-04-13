@@ -1,6 +1,7 @@
 {
   "pokemons": [
     {
+      "index": 1,
       "id": "001",
       "name": "Bulbassaur",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
@@ -23,6 +24,7 @@
       }
     },
     {
+      "index": 2,
       "id": "004",
       "name": "Charmander",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
@@ -45,6 +47,7 @@
       }
     },
     {
+      "index":3,
       "id": "007",
       "name": "Squirtle",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
@@ -67,6 +70,7 @@
       }
     },
     {
+      "index":4,
       "id": "012",
       "name": "Butterfree",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
@@ -89,6 +93,7 @@
       }
     },
     {
+      "index":5,
       "id": "025",
       "name": "Pikachu",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
@@ -111,6 +116,7 @@
       }
     },
     {
+      "index":6,
       "id": "092",
       "name": "Gastly",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png",
@@ -134,6 +140,7 @@
     },
 
     {
+      "index":7,
       "id": "132",
       "name": "Ditto",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png",
@@ -156,6 +163,7 @@
       }
     },
     {
+      "index":8,
       "id": "152",
       "name": "Mew",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png",
@@ -178,6 +186,7 @@
       }
     },
     {
+      "index":9,
       "id": "304",
       "name": "Aron",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/304.png",

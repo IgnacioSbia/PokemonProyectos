@@ -11,14 +11,36 @@ import arrow from '../imagenes/arrow-left.svg'
 
 const PokemonDetail = () => {
   const [pokemon, setPokemon] = useState(null);
-
   const { pokemonId } = useParams();
+  const [currentIndex, setCurrentIndex] = useState(1);
+
+
+  const handleNext = () => {
+    if (currentIndex === pokemon.id - 1) {
+      setCurrentIndex(1);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIndex === 1) {
+      setCurrentIndex(pokemon.index + 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+ 
+
 
   useEffect(() => {
     Axios.get(`http://localhost:3000/pokemons/${pokemonId}`).then(
       (res) =>setPokemon(res.data)
     );
   }, [pokemonId]);
+
+  
 
   return (
     <>
@@ -27,9 +49,10 @@ const PokemonDetail = () => {
         <>
         <div className="pokemonDetail" style={{backgroundColor:pokemon.color}}>
           <div className="pokemonDetailsTitle">
-           <Link to="/pokemons"><img src={arrow} className="pokemonDetailsArrowBack"/></Link>
+           <Link to="/"><img src={arrow} className="pokemonDetailsArrowBack"/></Link>
            <h3 className="pokemonDetailName">{pokemon.name}</h3>
            <p className="pokemonDetailId">#{pokemon.id}</p>
+         
          </div>
           <div className="pokemonDetailContent">
             <img className="pokemonDetailImg" src={pokemon.imagen} alt={pokemon.name} />

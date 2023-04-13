@@ -7,13 +7,15 @@ import SearchResult from "./pages/SearchResult";
 import NotFound from "./pages/NotFound";
 
 import "./App.css";
+import PokemonDetail from "./components/PokemonDetail";
 
 function App() {
   return (
     
     <Routes>
+      <Route path="pokemons/:pokemonId" element={<PokemonDetail />} />
       <Route path="/" element={<Layout />}>
-        <Route path="pokemons/*" element={<Pokemons />} />
+        
         <Route path="search" element={<SearchResult />} />
       </Route>
       <Route path="*" element={<NotFound />} />

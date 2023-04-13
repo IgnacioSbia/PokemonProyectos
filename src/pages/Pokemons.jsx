@@ -50,11 +50,11 @@ const Pokemons = () => {
           Value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button onClick={sortPokemon ? reversePokemonSort : sortPokemonByName}>{sortPokemon? <img src={sortId} className="searchSortById"/> : <img src={sortName} className="searchSortByName"/>}</button>
+        <button className="searchSortBy" onClick={sortPokemon ? reversePokemonSort : sortPokemonByName}>{sortPokemon? <img src={sortId} /> : <img src={sortName} />}</button>
       
       <Routes>
         <Route index element={<PokemonsList pokemon={filteredPokemon} />} />
-        <Route path=":pokemonId" element={<PokemonDetail />} />
+        
       </Routes>
     </>
   );
