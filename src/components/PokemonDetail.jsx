@@ -54,7 +54,7 @@ const PokemonDetail = () => {
 
   return (
     <>
-      {!pokemon && <em>Loading...</em>}
+      {!pokemon &&  <em style={{color:"black", fontSize:"20px", fontWeight:"bolder"}}><Link to="/"><img src={arrow} className="pokemonDetailsArrowBackToList"/></Link>Loading...</em>}
       {pokemon && (
         <>
         <div className="pokemonDetail" style={{backgroundColor:pokemon.color}}>
