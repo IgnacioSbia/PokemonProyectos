@@ -16,6 +16,7 @@ const PokemonDetail = () => {
   const [pokemon, setPokemon] = useState(null);
   const { pokemonId } = useParams();
   const navigate = useNavigate();
+  const [pokemonState, setPokemonState] =useState("Loading...")
 
   useEffect(() => {
     const obtainPokemon = async ()=>{
@@ -24,7 +25,7 @@ const PokemonDetail = () => {
         setPokemon(response.data);
         
       }catch(error){
-        console.log(error)
+        setPokemonState("Pokemon Not Found")
       }
     }
     obtainPokemon();
@@ -35,17 +36,17 @@ const PokemonDetail = () => {
     const previousPokemonId = pokemonId - 1;
     navigate(`/pokemons/${previousPokemonId}`);
     }else{
-      const previousPokemonId = parseInt(pokemonId) + 8;
+      const previousPokemonId = parseInt(pokemonId) + 11;
     navigate(`/pokemons/${previousPokemonId}`)
     }
     
   };
   const handleNext = ()=>{
-    if(pokemonId <9){
+    if(pokemonId < 12){
     const nextPokemonId = parseInt(pokemonId) + 1 ;
     navigate(`/pokemons/${nextPokemonId}`);
     }else{
-      const nextPokemonId = parseInt(pokemonId) - 8 ;
+      const nextPokemonId = parseInt(pokemonId) - 11 ;
       navigate(`/pokemons/${nextPokemonId}`);
     }
   };
@@ -54,8 +55,8 @@ const PokemonDetail = () => {
 
   return (
     <>
-      {!pokemon &&  <em style={{color:"black", fontSize:"20px", fontWeight:"bolder"}}><Link to="/"><img src={arrow} className="pokemonDetailsArrowBackToList"/></Link>Loading...</em>}
-      {pokemon && (
+      {!pokemon ?  <em style={{color:"black", fontSize:"20px", fontWeight:"bolder"}}><Link to="/"><img src={arrow} className="pokemonDetailsArrowBackToList"/></Link>{pokemonState}</em>:
+      (
         <>
         <div className="pokemonDetail" style={{backgroundColor:pokemon.color}}>
           <div className="pokemonDetailsTitle">
@@ -108,7 +109,7 @@ const PokemonDetail = () => {
                           height: "5px",
                         }}
                         className="pokemonDetailBarHp"
-                        max="100"
+                        max="200"
                         value={pokemon.stats.HP}
                       >
                           <style>
@@ -132,7 +133,7 @@ const PokemonDetail = () => {
                           height: "5px",
                         }}
                         className="pokemonDetailBarAtk"
-                        max="100"
+                        max="200"
                         value={pokemon.stats.ATK}
                       >
                           <style>
@@ -156,7 +157,7 @@ const PokemonDetail = () => {
                           height: "5px",
                         }}
                         className="pokemonDetailBarDef"
-                        max="100"
+                        max="200"
                         value={pokemon.stats.DEF}
                       >
                           <style>
@@ -180,7 +181,7 @@ const PokemonDetail = () => {
                           height: "5px",
                         }}
                         className="pokemonDetailBarSatk"
-                        max="100"
+                        max="200"
                         value={pokemon.stats.SATK}
                       >
                           <style>
@@ -204,7 +205,7 @@ const PokemonDetail = () => {
                           height: "5px",
                         }}
                         className="pokemonDetailBarSdef"
-                        max="100"
+                        max="200"
                         value={pokemon.stats.SDEF}
                       >
                           <style>
@@ -228,7 +229,7 @@ const PokemonDetail = () => {
                           height: "5px",
                         }}
                         className="pokemonDetailBarSpd"
-                        max="100"
+                        max="200"
                         value={pokemon.stats.SPD}
                       >
                           <style>

@@ -15,7 +15,6 @@ function App() {
     <Routes>
       <Route path="pokemons/:pokemonId" element={<PokemonDetail />} />
       <Route path="/" element={<Layout />}>
-        
         <Route path="search" element={<SearchResult />} />
       </Route>
       <Route path="*" element={<NotFound />} />

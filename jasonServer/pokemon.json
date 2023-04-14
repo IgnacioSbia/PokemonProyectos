@@ -207,6 +207,76 @@
         "SDEF": "040",
         "SPD": "030"
       }
+    },
+    {
+      "index": "003",
+      "id":10,
+      "name": "Venusaur",
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+      "color": "#74CB48",
+      "secondaryColor": "#A43E9E",
+      "mainType": "Grass",
+      "SecondaryType":"Poison",
+      "MainAbility": "Overgrow",
+      "SecondaryAbility": "",
+      "height": "2,0m",
+      "weight": "100,0kg",
+      "description":"Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+      "stats":{
+        "HP": "80",
+        "ATK": "82",
+        "DEF": "83",
+        "SATK": "100",
+        "SDEF": "100",
+        "SPD": "80"
+      }
+    },
+    {
+      "index": "006",
+      "id": 11,
+      "name":"Charizard",
+      "imagen":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+      "color":"#F57D31",
+      "secondaryColor":"#A891EC",
+      "mainType":"Fire",
+      "SecondaryType":"Flying",
+      "MainAbility" : "Blaze",
+      "SecondaryAbility":"",
+      "height":"1,7m",
+      "weight":"90,5kg",
+      "description":"It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
+      "stats":{
+        "HP": "78",
+        "ATK": "84",
+        "DEF": "78",
+        "SATK": "109",
+        "SDEF": "85",
+        "SPD": "100"
+      }
+    },
+    {
+      "index": "008",
+      "id": 12,
+      "name": "Wartortle",
+      "imagen":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
+      "color":"#6493EB",
+      "secondaryColor":"",
+      "mainType":"Water",
+      "SecondaryType":"",
+      "MainAbility":"Torrent",
+      "SecondaryAbility":"",
+      "height": "1,0m",
+      "weight": "22,5kg",
+      "description": "It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.",
+      "stats":{
+        "HP": "59",
+        "ATK":"63",
+        "DEF":"80",
+        "SATK":"65",
+        "SDEF":"80",
+        "SPD":"58"
+      }
+
     }
   ]
 }
