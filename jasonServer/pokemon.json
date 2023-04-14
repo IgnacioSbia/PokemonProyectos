@@ -1,8 +1,8 @@
 {
   "pokemons": [
     {
-      "index": 1,
-      "id": "001",
+      "index": "001",
+      "id": 1,
       "name": "Bulbassaur",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
       "color": "#74CB48",
@@ -24,8 +24,8 @@
       }
     },
     {
-      "index": 2,
-      "id": "004",
+      "index": "004",
+      "id": 2,
       "name": "Charmander",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
       "color": "#F57D31",
@@ -47,8 +47,8 @@
       }
     },
     {
-      "index":3,
-      "id": "007",
+      "index":"007",
+      "id": 3,
       "name": "Squirtle",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
       "color": "#6493EB",
@@ -70,8 +70,8 @@
       }
     },
     {
-      "index":4,
-      "id": "012",
+      "index":"012",
+      "id": 4,
       "name": "Butterfree",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
       "color": "#A7B723",
@@ -93,8 +93,8 @@
       }
     },
     {
-      "index":5,
-      "id": "025",
+      "index":"025",
+      "id": 5,
       "name": "Pikachu",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
       "color": "#F9CF30",
@@ -116,8 +116,8 @@
       }
     },
     {
-      "index":6,
-      "id": "092",
+      "index":"092",
+      "id": 6,
       "name": "Gastly",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png",
       "color": "#70559B ",
@@ -140,8 +140,8 @@
     },
 
     {
-      "index":7,
-      "id": "132",
+      "index":"132",
+      "id": 7,
       "name": "Ditto",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png",
       "color": "#AAA67F ",
@@ -163,8 +163,8 @@
       }
     },
     {
-      "index":8,
-      "id": "152",
+      "index":"152",
+      "id": 8,
       "name": "Mew",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png",
       "color": "#FB5584 ",
@@ -186,8 +186,8 @@
       }
     },
     {
-      "index":9,
-      "id": "304",
+      "index":"304",
+      "id": 9,
       "name": "Aron",
       "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/304.png",
       "color": "#B7B9D0 ",

@@ -9,7 +9,7 @@ const PokemonsList = ({ pokemon }) => {
           <Link to={`/pokemons/${pokemon.id}`}>
             <div key={pokemon.id} className="pokemonCard">
               <div className="pokemonCardContent">
-              <p className="idPokemon">#{pokemon.id}</p>
+              <p className="idPokemon">#{pokemon.index}</p>
               <img src={pokemon.imagen} className="pokemonImage"/>
               </div>
               <h3 className="pokemonName">{pokemon.name}</h3>{" "}

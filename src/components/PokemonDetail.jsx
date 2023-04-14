@@ -6,40 +6,50 @@ import { Link } from "react-router-dom";
 import weight from '../imagenes/Weight.svg'
 import height from '../imagenes/Height.svg'
 import arrow from '../imagenes/arrow-left.svg'
+import { useNavigate } from "react-router-dom";
+import arrowBack from '../imagenes/pokemonarrowleft.svg'
+import arrowFoward from '../imagenes/pokemonarrowright.svg'
 
 
 
 const PokemonDetail = () => {
   const [pokemon, setPokemon] = useState(null);
   const { pokemonId } = useParams();
-  const [currentIndex, setCurrentIndex] = useState(1);
-
-
-  const handleNext = () => {
-    if (currentIndex === pokemon.id - 1) {
-      setCurrentIndex(1);
-    } else {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentIndex === 1) {
-      setCurrentIndex(pokemon.index + 1);
-    } else {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
- 
-
+  const navigate = useNavigate();
 
   useEffect(() => {
-    Axios.get(`http://localhost:3000/pokemons/${pokemonId}`).then(
-      (res) =>setPokemon(res.data)
-    );
+    const obtainPokemon = async ()=>{
+      try{
+        const response = await Axios.get(`http://localhost:3000/pokemons/${parseInt(pokemonId)}`);
+        setPokemon(response.data);
+        
+      }catch(error){
+        console.log(error)
+      }
+    }
+    obtainPokemon();
   }, [pokemonId]);
 
+  const handlePrevious = ()=>{
+    if(pokemonId>1){
+    const previousPokemonId = pokemonId - 1;
+    navigate(`/pokemons/${previousPokemonId}`);
+    }else{
+      const previousPokemonId = parseInt(pokemonId) + 8;
+    navigate(`/pokemons/${previousPokemonId}`)
+    }
+    
+  };
+  const handleNext = ()=>{
+    if(pokemonId <9){
+    const nextPokemonId = parseInt(pokemonId) + 1 ;
+    navigate(`/pokemons/${nextPokemonId}`);
+    }else{
+      const nextPokemonId = parseInt(pokemonId) - 8 ;
+      navigate(`/pokemons/${nextPokemonId}`);
+    }
+  };
+ 
   
 
   return (
@@ -51,7 +61,12 @@ const PokemonDetail = () => {
           <div className="pokemonDetailsTitle">
            <Link to="/"><img src={arrow} className="pokemonDetailsArrowBack"/></Link>
            <h3 className="pokemonDetailName">{pokemon.name}</h3>
-           <p className="pokemonDetailId">#{pokemon.id}</p>
+           <p className="pokemonDetailId">#{pokemon.index}</p>
+           <div style={{display:"flex", justifyContent: "space-around"}}>
+            <button onClick={handlePrevious} className="pokemonDetailArrowBack"><img src={arrowBack}/></button>
+            <button onClick={handleNext} className="pokemonDetailArrowFoward"><img src={arrowFoward}/></button>
+
+           </div>
          
          </div>
           <div className="pokemonDetailContent">
@@ -86,37 +101,145 @@ const PokemonDetail = () => {
                 <div className="pokemonDetailsHp">
                   <p className="pokemonDetailsStatPokemon" style={{color:pokemon.color}}>HP</p>
                   <p className="pokemonDetailsStatPokemonContent">{pokemon.stats.HP}</p>
-                  <div className="pokemonDetailBarHp" style={{background:pokemon.color}}><div className="pokemonDetailsStatBarContent" style={{background:pokemon.color, width:`${pokemon.stats.HP}%`} }></div></div>
+                      <progress
+                        style={{
+                          border: "none",
+                          borderRadius: "5px",
+                          height: "5px",
+                        }}
+                        className="pokemonDetailBarHp"
+                        max="100"
+                        value={pokemon.stats.HP}
+                      >
+                          <style>
+                            {`
+                            progress::-webkit-progress-value {
+                            background-color: ${pokemon.color};
+                            border-radius: 9px;
+                          }
+                        `}
+                        </style>
+                      </progress>
                 </div>
 
                 <div className="pokemonDetailsAtk">
                   <p className="pokemonDetailsStatPokemon" style={{color:pokemon.color}}>ATK</p>
                   <p className="pokemonDetailsStatPokemonContent">{pokemon.stats.ATK}</p>
-                  <div className="pokemonDetailBarAtk" style={{background:pokemon.color}}><div className="pokemonDetailsStatBarContent" style={{background:pokemon.color, width:`${pokemon.stats.ATK}%`} }></div></div>
+                  <progress
+                        style={{
+                          border: "none",
+                          borderRadius: "5px",
+                          height: "5px",
+                        }}
+                        className="pokemonDetailBarAtk"
+                        max="100"
+                        value={pokemon.stats.ATK}
+                      >
+                          <style>
+                            {`
+                            progress::-webkit-progress-value {
+                            background-color: ${pokemon.color};
+                            border-radius: 9px;
+                          }
+                        `}
+                        </style>
+                      </progress>
                 </div>
 
                 <div className="pokemonDetailsDef">
                   <p className="pokemonDetailsStatPokemon" style={{color:pokemon.color}}>DEF</p>
                   <p className="pokemonDetailsStatPokemonContent">{pokemon.stats.DEF}</p>
-                  <div className="pokemonDetailBarDef" style={{background:pokemon.color}}><div className="pokemonDetailsStatBarContent" style={{background:pokemon.color, width:`${pokemon.stats.DEF}%`} }></div></div>
+                  <progress
+                        style={{
+                          border: "none",
+                          borderRadius: "5px",
+                          height: "5px",
+                        }}
+                        className="pokemonDetailBarDef"
+                        max="100"
+                        value={pokemon.stats.DEF}
+                      >
+                          <style>
+                            {`
+                            progress::-webkit-progress-value {
+                            background-color: ${pokemon.color};
+                            border-radius: 9px;
+                          }
+                        `}
+                        </style>
+                      </progress>
                 </div>
 
                 <div className="pokemonDetailsSatk">
                   <p className="pokemonDetailsStatPokemon" style={{color:pokemon.color}}>SATK</p>
                   <p className="pokemonDetailsStatPokemonContent">{pokemon.stats.SATK}</p>
-                  <div className="pokemonDetailBarSatk" style={{background:pokemon.color}}><div className="pokemonDetailsStatBarContent" style={{background:pokemon.color, width:`${pokemon.stats.SATK}%`} }></div></div>
+                  <progress
+                        style={{
+                          border: "none",
+                          borderRadius: "5px",
+                          height: "5px",
+                        }}
+                        className="pokemonDetailBarSatk"
+                        max="100"
+                        value={pokemon.stats.SATK}
+                      >
+                          <style>
+                            {`
+                            progress::-webkit-progress-value {
+                            background-color: ${pokemon.color};
+                            border-radius: 9px;
+                          }
+                        `}
+                        </style>
+                      </progress>
                 </div>
 
                 <div className="pokemonDetailsSdef">
                   <p className="pokemonDetailsStatPokemon" style={{color:pokemon.color}}>SDEF</p>
                   <p className="pokemonDetailsStatPokemonContent">{pokemon.stats.SDEF}</p>
-                  <div className="pokemonDetailBarSdef" style={{background:pokemon.color}}><div className="pokemonDetailsStatBarContent" style={{background:pokemon.color, width:`${pokemon.stats.SDEF}%`} }></div></div>
+                  <progress
+                        style={{
+                          border: "none",
+                          borderRadius: "5px",
+                          height: "5px",
+                        }}
+                        className="pokemonDetailBarSdef"
+                        max="100"
+                        value={pokemon.stats.SDEF}
+                      >
+                          <style>
+                            {`
+                            progress::-webkit-progress-value {
+                            background-color: ${pokemon.color};
+                            border-radius: 9px;
+                          }
+                        `}
+                        </style>
+                      </progress>
                 </div>
 
                 <div className="pokemonDetailsSpd">
                   <p className="pokemonDetailsStatPokemon" style={{color:pokemon.color}}>SPD</p>
                   <p  className="pokemonDetailsStatPokemonContent">{pokemon.stats.SPD}</p>
-                  <div className="pokemonDetailBarSpd" style={{background:pokemon.color}}><div className="pokemonDetailsStatBarContent" style={{background:pokemon.color, width:`${pokemon.stats.SPD}%`} }></div></div>
+                  <progress
+                        style={{
+                          border: "none",
+                          borderRadius: "5px",
+                          height: "5px",
+                        }}
+                        className="pokemonDetailBarSpd"
+                        max="100"
+                        value={pokemon.stats.SPD}
+                      >
+                          <style>
+                            {`
+                            progress::-webkit-progress-value {
+                            background-color: ${pokemon.color};
+                            border-radius: 9px;
+                          }
+                        `}
+                        </style>
+                      </progress>
                 </div>
 
 
