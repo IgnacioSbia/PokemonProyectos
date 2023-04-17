@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
-import arrow from '../imagenes/arrow-left.svg'
-
+import logo from "../imagenes/pokebola.png";
+import "animate.css";
 const NotFound = () => {
   return (
     <>
-      <Link to="/"><img src={arrow} className="pokemonDetailsArrowBackNotFound"/></Link>
-      <h2>404 not Found</h2>
+      <div className="container">
+        <div className="pokebola">
+          <Link to="/">
+            {" "}
+            <img src={logo} className="avatar" />
+          </Link>
+        </div>
+        <div className="container animate__hinge">
+          <h1 className=" text ">404 not Found</h1>
+        </div>
+      </div>
     </>
   );
 };

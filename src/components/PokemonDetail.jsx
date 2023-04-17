@@ -9,6 +9,7 @@ import arrow from '../imagenes/arrow-left.svg'
 import { useNavigate } from "react-router-dom";
 import arrowBack from '../imagenes/pokemonarrowleft.svg'
 import arrowFoward from '../imagenes/pokemonarrowright.svg'
+import NotFound from "../pages/NotFound";
 
 
 
@@ -55,7 +56,7 @@ const PokemonDetail = () => {
 
   return (
     <>
-      {!pokemon ?  <em style={{color:"black", fontSize:"20px", fontWeight:"bolder"}}><Link to="/"><img src={arrow} className="pokemonDetailsArrowBackToList"/></Link>{pokemonState}</em>:
+      {!pokemon ?  <NotFound/>:
       (
         <>
         <div className="pokemonDetail" style={{backgroundColor:pokemon.color}}>
