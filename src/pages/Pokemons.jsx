@@ -33,7 +33,7 @@ const Pokemons = () => {
 
   const reversePokemonSort =()=>{
     const originalPokemon = [...pokemon].sort((a,b)=>
-    a.id - b.id
+    a.index - b.index
     );
     setPokemon(originalPokemon)
     setSortPokemon(false)
